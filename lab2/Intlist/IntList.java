@@ -111,7 +111,6 @@ public class IntList {
 //            ptr = ptr.rest;
 //            ptr1 = ptr1.rest;
 //        }
-//        //walk through List B
 //        ptr.rest = B;
 //        return result;
         A = A.rest;
