@@ -41,6 +41,31 @@ public class IntListTest {
      */
 
     @Test
+    public void testReverse(){
+        //test the empty input
+        IntList empty = IntList.of();
+        IntList result1 = IntList.reverse(empty);
+        assertEquals(IntList.of(), result1);
+
+        //test the normal input
+        IntList normal = IntList.of(3, 6, 9, 12);
+        IntList result2 = IntList.reverse(normal);
+        assertEquals(IntList.of(12, 9, 6, 3), result2);
+
+        IntList normal2 = IntList.of(3, 6);
+        IntList result3 = IntList.reverse(normal2);
+        assertEquals(IntList.of(6, 3), result3);
+
+
+
+        //test if the method is destructive
+        IntList L = IntList.of(1,4,9,16);
+        IntList.reverse(L);
+        assertNotEquals(IntList.of(1, 4, 9, 16), L);
+
+    }
+
+    @Test
     public void testSquareListRecursive() {
         IntList L = IntList.of(1, 2, 3);
         IntList res = IntList.squareListRecursive(L);
