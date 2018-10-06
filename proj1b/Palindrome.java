@@ -25,14 +25,12 @@ public class Palindrome {
         if (word.length() <= 1){
             return true;
         } else {
-            boolean check = true;
             for (int i = 0; i < word.length() / 2; i++){
                 if (!cc.equalChars(word.charAt(i), word.charAt(word.length()-1-i))){
-                    check = false;
-                    break;
+                    return false;
                 }
             }
-            return check;
+            return true;
         }
     }
 }
